@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tt.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            <button class="btLogin">Login</button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="wrapper" id="form-wrapper" style="display: none;">
+            <div class="logbox">
+                <div class="from-loginbox" id="login-form"> 
+                    <span class="close-btn" id="close-wrapper"><i class='bx bx-x'></i></span> 
+                    <div class="logbox-title">
+                        <h2>Login</h2>
+                        <p>Fill your account information</p>
+                    </div>
+                    <form action="#">
+                        <div class="inputinf">
+                            <span class="icon">
+                                <i class='bx bx-envelope'></i>
+                            </span>
+                            <input type="email"required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="inputinf">
+                            <span class="icon">
+                                <i class='bx bxs-key'></i>
+                            </i>
+                            </span>
+                            <input type="password"required>
+                            <label>Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" class="check-box">Remember me</label>
+                            <a href="#">Forgot password</a>
+                        </div>
+                        <button type="submit" class="Sendinf">Login</button>
+                        <div class="creacc-link">
+                            <p>I'dont have account | <button id="show-register">Cre account</button></p> 
+                        </div>
+                    </form>
+                </div>        
+                <div class="from-loginbox" id="register-form" style="display: none;">
+                    <span class="close-btn" id="close-wrapper"><i class='bx bx-x'></i></span> 
+                    <div class="logbox-title">
+                        <h2>Registration </h2>
+                        <p>Fill your account information</p>
+                    </div>
+                    <form action="#">
+                        <div class="inputinf">
+                            <span class="icon">
+                                <i class='bx bx-user'></i>
+                            </span>
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="inputinf">
+                            <span class="icon">
+                                <i class='bx bx-envelope'></i>
+                            </span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="inputinf">
+                            <span class="icon">
+                                <i class='bx bxs-key'></i>
+                            </span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" class="check-box" required>Agree to the tearm & condition</label>
+                        </div>
+                        <button type="submit" class="Sendinf">Register</button>
+                        <div class="creacc-link">
+                            <p>Already have an account? <button id="show-login"> Login here</button></p> 
+                        </div>
+                    </form>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <script src="transform.js"></script> 
+</body>
+</html>
