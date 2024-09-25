@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="tt.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <header class="header">
         <a href="#" class="logo">Logo</a>
@@ -15,62 +17,64 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Services</a>
-            <button class="btLogin">Login</button>
+            <button class="button-account">Account</button>
         </nav>
     </header>
 
     <section class="section">
-        <div class="wrapper" id="form-wrapper" style="display: none;">
-            <div class="logbox">
-                <div class="from-loginbox" id="login-form"> 
-                    <span class="close-btn" id="close-wrapper"><i class='bx bx-x'></i></span> 
-                    <div class="logbox-title">
-                        <h2>Login</h2>
-                        <p>Fill your account information</p>
+        <div class="form-wrapper" id="form-wrapper" style="display: none;">
+            <!-- Login Form -->
+            <div class="account-box">
+                <div class="form-container" id="login-form">
+                    <span class="close-button" id="close-wrapper"><i class='bx bx-x'></i></span>
+                    <div class="form-header">
+                        <h2>Sign in</h2>
+                        <p class="description">If you have an account, sign in with your email address</p>
                     </div>
                     <form action="#">
-                        <div class="inputinf">
+                        <div class="input-group">
                             <span class="icon">
                                 <i class='bx bx-envelope'></i>
                             </span>
-                            <input type="email"required>
+                            <input type="email" id="login-email" required>
                             <label>Email</label>
                         </div>
 
-                        <div class="inputinf">
+                        <div class="input-group">
                             <span class="icon">
                                 <i class='bx bxs-key'></i>
-                            </i>
+                                </i>
                             </span>
-                            <input type="password"required>
+                            <input type="password" required>
                             <label>Password</label>
                         </div>
 
-                        <div class="remember-forgot">
+                        <div class="checkbox-input">
                             <label><input type="checkbox" class="check-box">Remember me</label>
-                            <a href="#">Forgot password</a>
+                            <button id="show-forgot-password">Forgot Password</button>
                         </div>
-                        <button type="submit" class="Sendinf">Login</button>
-                        <div class="creacc-link">
-                            <p>I'dont have account | <button id="show-register">Cre account</button></p> 
+                        <button type="submit" class="submit-button">Sign in</button>
+                        <div class="create-account-link">
+                            <p>Don't have an account?<button id="show-register">Create account</button></p>
                         </div>
                     </form>
-                </div>        
-                <div class="from-loginbox" id="register-form" style="display: none;">
-                    <span class="close-btn" id="close-wrapper"><i class='bx bx-x'></i></span> 
-                    <div class="logbox-title">
-                        <h2>Registration </h2>
-                        <p>Fill your account information</p>
+                </div>
+                <!-- Registration Form -->
+                <div class="form-container" id="register-form" style="display: none;">
+                    <span class="close-button" id="close-wrapper"><i class='bx bx-x'></i></span>
+                    <div class="form-header">
+                        <h2>Registration</h2>
+                        <p class="description">Fill in your account information</p>
                     </div>
                     <form action="#">
-                        <div class="inputinf">
+                        <div class="input-group">
                             <span class="icon">
                                 <i class='bx bx-user'></i>
                             </span>
                             <input type="text" required>
                             <label>Username</label>
                         </div>
-                        <div class="inputinf">
+                        <div class="input-group">
                             <span class="icon">
                                 <i class='bx bx-envelope'></i>
                             </span>
@@ -78,27 +82,49 @@
                             <label>Email</label>
                         </div>
 
-                        <div class="inputinf">
+                        <div class="input-group">
                             <span class="icon">
                                 <i class='bx bxs-key'></i>
                             </span>
                             <input type="password" required>
                             <label>Password</label>
                         </div>
-                        <div class="remember-forgot">
-                            <label><input type="checkbox" class="check-box" required>Agree to the tearm & condition</label>
+
+                        <div class="checkbox-input">
+                            <label><input type="checkbox" class="check-box" required>Agree to the terms & conditions</label>
                         </div>
-                        <button type="submit" class="Sendinf">Register</button>
-                        <div class="creacc-link">
-                            <p>Already have an account? <button id="show-login"> Login here</button></p> 
+                        <button type="submit" class="submit-button">Register</button>
+                        <div class="create-account-link">
+                            <p>Already have an account?<button id="show-login">Login here</button></p>
                         </div>
                     </form>
                 </div>
-        
+                <!-- Forgot Password Form -->
+                <div class="form-container" id="forgot-password-form" style="display: none;">
+                    <span class="close-button" id="close-wrapper"><i class='bx bx-x'></i></span>
+                    <div class="form-header">
+                        <h2>Forgot Password</h2>
+                        <p class="description">Enter your email address to reset your password.</p>
+                    </div>
+                    <form action="#">
+                        <div class="input-group">
+                            <span class="icon">
+                                <i class='bx bx-envelope'></i>
+                            </span>
+                            <input type="email" id="forgot-email" required>
+                            <label>Email</label>
+                        </div>
+                        <button type="submit" class="submit-button">Send Reset Link</button>
+                        <div class="create-account-link">
+                            <button id="back-login">Back</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="transform.js"></script> 
+    <script src="transform.js"></script>
 </body>
+
 </html>

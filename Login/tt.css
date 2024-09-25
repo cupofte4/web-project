@@ -1,11 +1,13 @@
-
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
-.header{
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,7 +19,8 @@
     align-items: center;
     z-index: 99;
 }
-.logo{
+
+.logo {
     cursor: pointer;
     font-size: 32px;
     color: white;
@@ -25,18 +28,21 @@
     font-weight: 700;
     pointer-events: none;
 }
+
 .navbar a {
     font-size: 18px;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-right: 40px;
 }
- .navbar a:hover {
-    text-decoration: underline; 
+
+.navbar a:hover {
+    text-decoration: underline;
     text-underline-offset: 6px;
 }
-.navbar .btLogin{
+
+.navbar .button-account {
     position: relative;
     background: transparent;
     border: none;
@@ -47,7 +53,7 @@
     cursor: pointer;
 }
 
-.navbar .btLogin::before{
+.navbar .button-account::before {
     content: '';
     position: absolute;
     left: 0;
@@ -58,20 +64,24 @@
     opacity: 85;
 }
 
-.section{
+.form-container .close-button {
+    font-size: 40px;
+}
+
+.section {
     min-height: 100vh;
     background: url(\Login.png) no-repeat;
     background-position: center;
-    background-size:cover ;
+    background-size: cover;
 }
 
-.wrapper{
+.form-wrapper {
     position: fixed;
-    top:0;
-    right:0 ;
-    width: 40vw;
+    top: 0;
+    right: 0;
+    width: 22.7vw;
     height: 100%;
-    background:transform#fff;
+    background: transform#fff;
     backdrop-filter: blur(1px);
     z-index: 100;
     align-items: center;
@@ -80,7 +90,8 @@
     border-left: 1px solid rgba(255, 255, 255, 0.2);
 
 }
-.close-btn {
+
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -88,43 +99,60 @@
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
 }
 
-.close-btn:hover {
+.close-button:hover {
     color: rgb(0, 0, 0);
 }
-.wrapper .logbox{
+
+.form-wrapper .account-box {
     margin: 0;
     padding: 0;
     background: transform(48, 232, 228);
     width: 100%;
 }
-/* .wrapper .from-loginbox{
-    display: none;
-} */
-.from-loginbox .logbox-title{
-   text-align: center;
+
+.form-container .form-header {
+    text-align: center;
     margin-bottom: 40px;
     color: #fcfcfc;
 }
-.logbox-title h2{
-    font-size: 32px;
-}
-.logbox-title p {
+
+.form-header p {
     font-size: 14px;
     font-weight: 500;
 }
 
-.logbox .inputinf{
+.form-container .form-header h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 750;
+    margin: 0 0 20px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.description {
+    font-size: 14px;
+    text-align: center;
+    border: 0;
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #d4d4d4;
+    letter-spacing: 0px;
+}
+
+.account-box .input-group {
     width: 100%;
     position: relative;
     margin: 30px 0;
     border-bottom: 2px solid white;
 }
-.inputinf input{
+
+.input-group input {
     border: none;
     outline: none;
     width: 100%;
@@ -136,7 +164,7 @@
     padding-right: 25px;
 }
 
-.inputinf label{
+.input-group label {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -147,11 +175,13 @@
     pointer-events: none;
     transition: 0.4s;
 }
-.inputinf input:focus~label,
-.inputinf input:valid~label{
-top: -6px;
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -6px;
 }
-.inputinf .icon {
+
+.input-group .icon {
     position: absolute;
     right: 0;
     top: 50%;
@@ -160,7 +190,7 @@ top: -6px;
     color: white;
 }
 
-.logbox .remember-forgot{
+.account-box .checkbox-input {
     font-size: 14px;
     color: white;
     font-weight: 500;
@@ -169,63 +199,65 @@ top: -6px;
     justify-content: space-between;
     margin-bottom: 18px;
 }
-.remember-forgot label input{
+
+.checkbox-input label input {
     accent-color: white;
     margin-right: 3px;
 }
 
-.remember-forgot a{
+.account-box .checkbox-input button {
+    background: transparent;
+    margin: none;
+    border: none;
     color: white;
-    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.remember-forgot a:hover{
-    text-decoration: underline;
-    transform: scale(1.1);
+.account-box .checkbox-input button:hover {
+    cursor: pointer;
     color: rgb(255, 255, 255, 0.8);
-    transition: 0.2s;
 }
 
-.logbox .Sendinf{
+.account-box .submit-button {
     width: 100%;
     height: 40px;
     background: white;
-    border:none;
+    border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: white,0.2;
+    box-shadow: white, 0.2;
     cursor: pointer;
     font-size: 17px;
     font-weight: 700;
 }
 
-.logbox .creacc-link{
+.account-box .create-account-link {
     font-size: 15px;
     color: white;
     text-align: center;
     font-weight: 500;
-    margin:25px 0 15px;
+    margin: 25px 0 15px;
 }
-.logbox .creacc-link button{
+
+.account-box .create-account-link button {
     background: transparent;
     margin: none;
     border: none;
-}
-
-.from-loginbox .close-btn{
-    font-size: 40px;
-    font-weight: 500;
-}
-.logbox .creacc-link button{
+    border-radius: 4px;
     color: white;
     font-size: 15px;
     font-weight: 500;
-
+    padding: 10px;
 }
 
-.logbox .creacc-link button:hover{
+.account-box .create-account-link button:hover {
     cursor: pointer;
-    transform: scale(1.1);
     color: rgb(255, 255, 255, 0.8);
-    transition: 0.2s;
+}
+
+@media (max-width: 480px) {
+    .section {
+        width: 90%;
+    }
 }
