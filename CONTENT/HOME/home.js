@@ -1,12 +1,17 @@
-$(document).ready(function () {
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop()) {
-            $("header").addClass('sticky');
-        } else {
-            $("header").removeClass('sticky');
-        }
-    });
-});
+window.onscroll = function () {
+    stickyHeader();
+};
+
+var header = document.querySelector(".sticky-header");
+var sticky = header.offsetTop;
+
+function stickyHeader() {
+    if (window.scrollY > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const wishlists = document.querySelectorAll('.wishlist');

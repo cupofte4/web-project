@@ -106,77 +106,48 @@ nav a:hover {
     height: 83vh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .hero_content {
     color: white;
     text-transform: uppercase;
     padding: 20px;
-    margin-left: 162px;
-    max-width: 800px;
-    height: 350px;
+    margin-right: 180px;
+    height: 200px;
     text-shadow: 0 3px 6px #000;
 }
 
 .hero_content h1 {
-    font-size: 55px;
-    font-weight: bold;
+    font-size: 50px;
     line-height: 1.3;
     letter-spacing: 0.3vw;
 }
 
 .hero_content p {
-    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    font-size: 16px;
+    font-weight: 400;
     margin: 0 0 20px;
+    text-align: center;
 }
 
-/* Discover Button */
-.btn-discover {
-    display: inline-block;
-    padding: 10px 62px;
-    border: 3px solid white;
-    color: white;
+/* Breadcrumbs */
+.breadcrumbs {
     font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
+    padding: 7px 15px;
+    border-bottom: 1px solid #000;
+    color: #707070;
+}
+
+.breadcrumbs a {
+    color: #707070;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    backdrop-filter: blur(18px);
 }
 
-.btn-discover:hover {
-    background-color: rgba(26, 26, 26, 0.96);
-}
-
-/* More Button */
-.view-all .btn-more {
-    display: inline-block;
-    font-size: 14px;
-}
-
-/* Main Section */
-.main {
-    padding-top: 30px;
-}
-
-.main-heading {
-    padding-left: 30px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.main-heading h1 {
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-}
-
-.main-heading a {
-    font-size: 13px;
-    font-weight: lighter;
-    color: black;
-    display: block;
+.breadcrumbs a:hover {
+    color: #000;
 }
 
 /* Products Grid */
@@ -184,11 +155,12 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0px 30px 50px;
+    padding: 30px 16px;
 }
 
 .product {
     width: 24%;
+    padding-bottom: 28px;
     text-align: left;
     position: relative;
 }
@@ -216,6 +188,10 @@ nav a:hover {
     cursor: pointer;
 }
 
+.product h3 a{
+    text-decoration: none;
+    color: #000;
+}
 
 /* Price and Add to Cart */
 .product .price-cart {
