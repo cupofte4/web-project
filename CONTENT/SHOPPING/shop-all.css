@@ -198,8 +198,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: bold;
-    padding-top: 10px;
+    font-weight: 500;
     margin-top: auto;
 }
 
@@ -241,57 +240,6 @@ nav a:hover {
 
 .product .wishlist.active {
     color: #000;
-}
-
-/* Container for items */
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 30px 56px 30px;
-}
-
-.container .item {
-    width: 32%;
-    text-align: center;
-}
-
-.container #item1,
-#item2,
-#item3 {
-    cursor: pointer;
-}
-
-.container .item img {
-    width: 100%;
-    aspect-ratio: auto;
-    height: 768px;
-}
-
-.container .item h1 {
-    display: block;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: left;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.item .links {
-    display: flex;
-    gap: 10px;
-    text-align: left;
-}
-
-.links .btn-links {
-    display: inline-block;
-    font-size: 16px;
-    color: #000;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.links .btn-links:hover {
-    color: #646464;
 }
 
 /* Footer */

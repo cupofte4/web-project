@@ -1,3 +1,4 @@
+// Sticky Header
 window.onscroll = function () {
     stickyHeader();
 };
@@ -13,6 +14,7 @@ function stickyHeader() {
     }
 }
 
+// Wishlist
 document.addEventListener('DOMContentLoaded', function () {
     const wishlists = document.querySelectorAll('.wishlist');
     wishlists.forEach(wishlist => {
